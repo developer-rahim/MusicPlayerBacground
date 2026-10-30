@@ -1,16 +1,57 @@
-# ayat
+# MusicPlayerBacground
 
-A new Flutter project.
+A music player that keeps playing when the app is backgrounded.
+
+## Highlights
+
+- Background audio playback via `assets_audio_player`.
+- Provider drives play, pause and track state across the UI.
+- Track metadata separated into `model`, with reusable `widgets`.
+
+## Tech Stack
+
+| Concern | Choice |
+|---|---|
+| UI | Flutter, Material |
+| State management | `provider` |
+| Audio | `assets_audio_player` |
+
+## Project Structure
+
+```
+lib/
+- `model`
+- `provider`
+- `screen`
+- `widgets`
+```
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### Prerequisites
 
-A few resources to get you started if this is your first Flutter project:
+- Flutter `>= 3.16` (Dart `>= 3.2`)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+### Run
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+git clone https://github.com/developer-rahim/MusicPlayerBacground.git
+cd MusicPlayerBacground
+flutter pub get
+flutter run
+```
+
+### Test
+
+```bash
+flutter test
+flutter analyze
+```
+
+## Notes
+
+Background playback continues while the app is minimised — handle audio focus for production use.
+
+## License
+
+Released under the MIT License.
